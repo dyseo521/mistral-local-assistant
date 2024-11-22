@@ -87,6 +87,40 @@ AI 챗봇 프로젝트 - Mistral-7B 모델 기반의 로컬 챗봇 시스템
    python app.py
    ```
 
+## 🔎 오픈소스 출처
+
+이 프로젝트는 다음의 오픈소스 프로젝트들을 기반으로 제작되었습니다:
+
+### AI 모델
+- **Mistral-7B**: [mistralai/Mistral-7B-Instruct-v0.1](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1)
+  - 라이선스: Apache 2.0
+  - 제작: Mistral AI
+  - GGUF 변환: [TheBloke/Mistral-7B-Instruct-v0.1-GGUF](https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF)
+
+### 백엔드
+- **FastAPI**: [tiangolo/fastapi](https://github.com/tiangolo/fastapi)
+  - 라이선스: MIT
+  - 버전: 0.104.1
+- **CTransformers**: [marella/ctransformers](https://github.com/marella/ctransformers)
+  - 라이선스: MIT
+  - 버전: 0.2.27
+- **Pydantic**: [pydantic/pydantic](https://github.com/pydantic/pydantic)
+  - 라이선스: MIT
+  - 버전: >=2.4.2
+
+### 프론트엔드
+- **Gradio**: [gradio-app/gradio](https://github.com/gradio-app/gradio)
+  - 라이선스: Apache 2.0
+  - 버전: 4.12.0
+- **Requests**: [psf/requests](https://github.com/psf/requests)
+  - 라이선스: Apache 2.0
+  - 버전: 2.31.0
+
+### 개발 도구
+- **Uvicorn**: [encode/uvicorn](https://github.com/encode/uvicorn)
+  - 라이선스: BSD 3-Clause
+  - 버전: 0.24.0
+
 ## 📄 라이선스
 
 이 프로젝트는 MIT 라이선스를 따릅니다.
