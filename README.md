@@ -1,7 +1,6 @@
 # Mistral Local Assistant
 
 AI 챗봇 프로젝트 - Mistral-7B 모델 기반의 로컬 챗봇 시스템
-개인 학습용으로 만들었습니다. 
 
 ## 📌 주요 기능
 
