@@ -33,9 +33,9 @@ class Query(BaseModel):
 
 TEMPLATES = {
     "default": "<s>[INST] {prompt} [/INST]",
-    "code": "<s>[INST] 다음 프로그래밍 작업을 수행해주세요: {prompt} [/INST]",
-    "analysis": "<s>[INST] 다음 내용을 분석해주세요: {prompt} [/INST]",
-    "creative": "<s>[INST] 창의적으로 다음 내용을 작성해주세요: {prompt} [/INST]"
+    "code": "<s>[INST] Please perform the following programming tasks: {prompt} [/INST]",
+    "analysis": "<s>[INST] Please analyze the following: {prompt} [/INST]",
+    "creative": "<s>[INST] Please write the following creatively: {prompt} [/INST]"
 }
 
 @app.post("/api/generate")
