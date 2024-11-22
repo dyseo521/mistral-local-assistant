@@ -11,11 +11,53 @@ AI 챗봇 프로젝트 - Mistral-7B 모델 기반의 로컬 챗봇 시스템
 
 ## 🛠️ 기술 스택
 
-- **Backend**: FastAPI
-- **Frontend**: Gradio
-- **AI Model**: Mistral-7B
+### 백엔드
+- **FastAPI**: Python 웹 프레임워크
+- **CTransformers**: LLM 모델 추론 라이브러리
+- **Pydantic**: 데이터 검증 및 설정 관리
+- **Mistral-7B**: LLM 모델
+
+### 프론트엔드
+- **Gradio**: ML 모델을 위한 웹 인터페이스 프레임워크
+- **Requests**: HTTP 통신 라이브러리
+
+## 🏗 프로젝트 구조
+
+mistral-local-assistant/
+├── backend/
+│ ├── main.py # FastAPI 백엔드 서버
+│ ├── models/ # AI 모델 파일 디렉토리
+│ └── requirements_be.txt
+├── frontend/
+│ ├── app.py # Gradio UI 애플리케이션
+│ └── requirements_fe.txt
+└── README.md
+
+## 💻 주요 기능 설명
+
+### 1. AI 응답 생성
+- Mistral-7B 모델을 사용한 텍스트 생성
+- 4가지 프롬프트 템플릿 지원:
+  - Default: 일반적인 대화
+  - Code: 프로그래밍 관련 응답
+  - Analysis: 분석 중심의 응답
+  - Creative: 창의적인 응답
+
+### 2. 대화 기록 관리
+- JSON 형식으로 대화 내용 저장
+- 시간, 질문, 답변 기록
+- 대화 기록 조회 및 새로고침 기능
+
+### 3. 사용자 인터페이스
+- 직관적인 웹 인터페이스
+- 대화하기/대화 기록 탭 구조
+- 복사 버튼 등 편의 기능 제공
 
 ## 🚀 시작하기
+
+## 📝 참고사항
+- 영어 입력 권장 (더 나은 응답 품질)
+- 로컬 실행 환경에서 테스트
 
 ### 사전 요구사항
 
