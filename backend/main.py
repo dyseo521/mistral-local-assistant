@@ -6,6 +6,7 @@ from ctransformers import AutoModelForCausalLM  # LLM 모델 로드
 import json
 import os
 from datetime import datetime
+from fastapi.responses import StreamingResponse
 
 # FastAPI 앱 인스턴스 생성
 app = FastAPI()
@@ -107,3 +108,17 @@ async def get_chat_history():
         return []
     except Exception as e:
         return {"error": str(e)}
+
+@app.post("/api/generate/stream")
+async def generate_stream_response(query: Query):
+    prompt_template = TEMPLATES.get(query.template, TEMPLATES["default"])
+    formatted_prompt = prompt_template.format(prompt=query.prompt)
+    
+    async def generate():
+        for token in llm(formatted_prompt, stream=True):
+            yield f"data: {token}\n\n"
+    
+    return StreamingResponse(
+        generate(),
+        media_type="text/event-stream"
+    )
